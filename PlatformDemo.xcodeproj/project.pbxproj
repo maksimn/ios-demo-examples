@@ -15,7 +15,7 @@
 		5947E83C26F5021300FCC315 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5947E83B26F5021300FCC315 /* Assets.xcassets */; };
 		5947E83F26F5021300FCC315 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5947E83D26F5021300FCC315 /* LaunchScreen.storyboard */; };
 		5947E84826F513E900FCC315 /* UIKit+Example.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5947E84726F513E900FCC315 /* UIKit+Example.swift */; };
-		596B577B26FD5C33003C330B /* MyTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596B577A26FD5C33003C330B /* MyTableView.swift */; };
+		596B578326FE7B34003C330B /* ViewController+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596B578226FE7B34003C330B /* ViewController+Layout.swift */; };
 		5993621626FB645900AD78C5 /* TableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5993621526FB645900AD78C5 /* TableController.swift */; };
 		5993621A26FB646600AD78C5 /* TableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5993621926FB646600AD78C5 /* TableCell.swift */; };
 		5993621E26FB648800AD78C5 /* TableCell+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5993621D26FB648800AD78C5 /* TableCell+Layout.swift */; };
@@ -35,7 +35,7 @@
 		5947E83E26F5021300FCC315 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5947E84026F5021300FCC315 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5947E84726F513E900FCC315 /* UIKit+Example.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIKit+Example.swift"; sourceTree = "<group>"; };
-		596B577A26FD5C33003C330B /* MyTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableView.swift; sourceTree = "<group>"; };
+		596B578226FE7B34003C330B /* ViewController+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Layout.swift"; sourceTree = "<group>"; };
 		5993621526FB645900AD78C5 /* TableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableController.swift; sourceTree = "<group>"; };
 		5993621926FB646600AD78C5 /* TableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCell.swift; sourceTree = "<group>"; };
 		5993621D26FB648800AD78C5 /* TableCell+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TableCell+Layout.swift"; sourceTree = "<group>"; };
@@ -78,6 +78,7 @@
 				5947E82F26F5020F00FCC315 /* AppDelegate.swift */,
 				5947E83126F5020F00FCC315 /* SceneDelegate.swift */,
 				5947E83326F5020F00FCC315 /* ViewController.swift */,
+				596B578226FE7B34003C330B /* ViewController+Layout.swift */,
 				5947E83B26F5021300FCC315 /* Assets.xcassets */,
 				5947E83D26F5021300FCC315 /* LaunchScreen.storyboard */,
 				5947E84026F5021300FCC315 /* Info.plist */,
@@ -96,7 +97,6 @@
 				5993621C26FB647800AD78C5 /* Cell */,
 				5993621526FB645900AD78C5 /* TableController.swift */,
 				5993622026FB728400AD78C5 /* TableData.swift */,
-				596B577A26FD5C33003C330B /* MyTableView.swift */,
 			);
 			path = TableView;
 			sourceTree = "<group>";
@@ -180,6 +180,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5993622126FB728400AD78C5 /* TableData.swift in Sources */,
+				596B578326FE7B34003C330B /* ViewController+Layout.swift in Sources */,
 				5993621E26FB648800AD78C5 /* TableCell+Layout.swift in Sources */,
 				5993621A26FB646600AD78C5 /* TableCell.swift in Sources */,
 				5947E84826F513E900FCC315 /* UIKit+Example.swift in Sources */,
@@ -187,7 +188,6 @@
 				59278C9626F696D300E795A6 /* Swift+Example.swift in Sources */,
 				5993621626FB645900AD78C5 /* TableController.swift in Sources */,
 				59AFEC2826F6326D00999429 /* Operation+Example.swift in Sources */,
-				596B577B26FD5C33003C330B /* MyTableView.swift in Sources */,
 				5947E83026F5020F00FCC315 /* AppDelegate.swift in Sources */,
 				5947E83226F5020F00FCC315 /* SceneDelegate.swift in Sources */,
 				5947E83A26F5020F00FCC315 /* PlatformDemo.xcdatamodeld in Sources */,

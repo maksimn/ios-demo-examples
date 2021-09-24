@@ -11,6 +11,8 @@ class TableController: NSObject, UITableViewDataSource, UITableViewDelegate {
 
     var strings: [String] = []
 
+    let cellToComputeRowHeight = TableCell(frame: .zero)
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         strings.count
     }
@@ -26,7 +28,10 @@ class TableController: NSObject, UITableViewDataSource, UITableViewDelegate {
         return cell
     }
 
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        cellToComputeRowHeight.placeholderLabel.text = strings[indexPath.row]
+        cellToComputeRowHeight.layoutSubviews()
 
+        return cellToComputeRowHeight.intrinsicContentSize.height
     }
 }
