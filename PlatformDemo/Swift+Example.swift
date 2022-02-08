@@ -52,3 +52,27 @@ class ClassOne {
         }
     }
 }
+
+class A {
+
+    var b: B?
+
+    var propX: String = "" {
+        didSet {
+            b?.propY = propX
+            print("A.propX")
+        }
+    }
+}
+
+class B {
+
+    weak var a: A?
+
+    var propY: String = "" {
+        didSet {
+            a?.propX = propY
+            print("B.propY")
+        }
+    }
+}

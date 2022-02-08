@@ -7,32 +7,22 @@
 
 import UIKit
 
-extension ViewController {
+extension TableExampleViewController {
 
     func initViews() {
         view.backgroundColor = .yellow
-        addSubviews()
-        initTableView()
-    }
-
-    func addSubviews() {
         view.addSubview(tableView)
-    }
 
-    func initTableView() {
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.backgroundColor = .white
         tableView.layer.cornerRadius = 16
-        tableView.register(TableCell.self, forCellReuseIdentifier: "\(TableCell.self)")
+        tableView.register(TableExampleCell.self, forCellReuseIdentifier: "\(TableExampleCell.self)")
         tableView.dataSource = tableController
         tableView.delegate = tableController
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = UITableView.automaticDimension
         tableView.tableHeaderView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.size.width, height: 1))
         tableView.tableFooterView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.size.width, height: 1))
-
-        tableController.strings = tableData.strings
-        tableController.onSelectRow = self.onSelectRow
     }
 
     override func viewDidLayoutSubviews() {

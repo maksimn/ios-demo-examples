@@ -7,7 +7,7 @@
 
 import UIKit
 
-extension TableCell {
+extension TableExampleCell {
 
     func initViews() {
         self.clipsToBounds = true
@@ -15,10 +15,10 @@ extension TableCell {
         self.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner]
         selectionStyle = .none
         backgroundColor = .white
-        initPlacholderLabel()
+        initLabel()
     }
 
-    private func initPlacholderLabel() {
+    private func initLabel() {
         label.textColor = .gray
         label.font = UIFont.systemFont(ofSize: 17)
         label.numberOfLines = 0

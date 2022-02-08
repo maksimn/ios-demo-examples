@@ -5,7 +5,7 @@
 //  Created by Maxim Ivanov on 22.09.2021.
 //
 
-class TableData {
+final class TableExampleModelImpl: TableExampleModel {
 
     var strings: [String] = [
         "Text 1",

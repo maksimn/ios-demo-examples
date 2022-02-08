@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TableCell: UITableViewCell {
+class TableExampleCell: UITableViewCell {
 
     let label = UILabel()
 

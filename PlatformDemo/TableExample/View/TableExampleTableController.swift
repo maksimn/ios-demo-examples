@@ -7,21 +7,19 @@
 
 import UIKit
 
-class TableController: NSObject, UITableViewDataSource, UITableViewDelegate {
+final class TableExampleTableController: NSObject, UITableViewDataSource, UITableViewDelegate {
 
     var strings: [String] = []
 
-    let hCell = TableCell(frame: .zero)
-
-    var onSelectRow: ((Int) -> Void)?
+    private let hCell = TableExampleCell(frame: .zero)
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         strings.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "\(TableCell.self)",
-                                                       for: indexPath) as? TableCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "\(TableExampleCell.self)",
+                                                       for: indexPath) as? TableExampleCell else {
             return UITableViewCell()
         }
 
@@ -35,9 +33,5 @@ class TableController: NSObject, UITableViewDataSource, UITableViewDelegate {
         hCell.layoutSubviews()
 
         return hCell.intrinsicContentSize.height
-    }
-
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        onSelectRow?(indexPath.row)
     }
 }
