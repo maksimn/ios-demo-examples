@@ -5,17 +5,18 @@
 //  Created by Maksim Ivanov on 08.02.2022.
 //
 
+import UIKit
+
 final class MainScreenBuilderImpl: MainScreenBuilder {
 
-    func build() -> MainScreenGraph {
-        let viewParams = MainScreenViewParams(
-            exampleTitles: ["Table view with cells with different height."]
-        )
-        let tableExampleBuilder = TableExampleBuilderImpl()
+    func build() -> UIViewController {
+        weak var viewControllerLazy: UIViewController?
 
-        return MainScreenGraphImpl(
-            viewParams: viewParams,
-            tableExampleBuilder: tableExampleBuilder
-        )
+        let exampleNavigatorBuilder = ExampleNavigatorBuilderImpl(viewControllerBlock: { viewControllerLazy })
+        let viewController = MainScreenViewController(exampleNavigatorBuilder: exampleNavigatorBuilder)
+
+        viewControllerLazy = viewController
+        
+        return viewController
     }
 }
