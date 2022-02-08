@@ -7,21 +7,15 @@
 
 import UIKit
 
-struct MainScreenViewParams {
-
-    let exampleTitles: [String]
-}
-
 final class MainScreenViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
-    private let params: MainScreenViewParams
-    private let router: MainScreenRouter
+    private let exampleNavigatorBuilder: ExampleNavigatorBuilder
+    private lazy var exampleNavigator = exampleNavigatorBuilder.build()
 
     private let tableView = UITableView()
 
-    init(params: MainScreenViewParams, router: MainScreenRouter) {
-        self.params = params
-        self.router = router
+    init(exampleNavigatorBuilder: ExampleNavigatorBuilder) {
+        self.exampleNavigatorBuilder = exampleNavigatorBuilder
         super.init(nibName: nil, bundle: nil)
         initViews()
     }
@@ -32,7 +26,7 @@ final class MainScreenViewController: UIViewController, UITableViewDataSource, U
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
-            return 1
+            return exampleNavigator.numberOfExamples
         } else {
             return 0
         }
@@ -43,19 +37,15 @@ final class MainScreenViewController: UIViewController, UITableViewDataSource, U
                                                  for: indexPath)
         var content = cell.defaultContentConfiguration()
 
-        if !params.exampleTitles.isEmpty {
-            content.text = params.exampleTitles[0]
-            cell.contentConfiguration = content
-            cell.selectionStyle = .none
-        }
+        content.text = exampleNavigator.titleFor(indexPath.row)
+        cell.contentConfiguration = content
+        cell.selectionStyle = .none
 
         return cell
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.row == 0 {
-            router.navigateToTableExample()
-        }
+        exampleNavigator.navigateTo(indexPath.row)
     }
 
     private func initViews() {
