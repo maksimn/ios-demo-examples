@@ -7,29 +7,25 @@
 
 final class ExampleNavigatorImpl: ExampleNavigator {
 
-    private let exampleItems: [ExampleItem]
+    private let items: [ExampleNavigatorItem]
 
-    init(exampleItems: [ExampleItem]) {
-        self.exampleItems = exampleItems
+    init(items: [ExampleNavigatorItem]) {
+        self.items = items
     }
 
     var numberOfExamples: Int {
-        exampleItems.count
+        items.count
     }
 
     func titleFor(_ i: Int) -> String {
-        guard i > -1 && i < numberOfExamples else {
-            return ""
-        }
+        guard i > -1 && i < numberOfExamples else { return "" }
 
-        return exampleItems[i].title
+        return items[i].title
     }
 
     func navigateTo(_ i: Int) {
-        guard i > -1 && i < numberOfExamples else {
-            return
-        }
+        guard i > -1 && i < numberOfExamples else { return }
 
-        exampleItems[i].router?.navigate()
+        items[i].router?.navigate()
     }
 }

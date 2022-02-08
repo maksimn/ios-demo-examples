@@ -25,11 +25,7 @@ final class MainScreenViewController: UIViewController, UITableViewDataSource, U
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if section == 0 {
-            return exampleNavigator.numberOfExamples
-        } else {
-            return 0
-        }
+        section == 0 ? exampleNavigator.numberOfExamples : 0
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -51,7 +47,6 @@ final class MainScreenViewController: UIViewController, UITableViewDataSource, U
     private func initViews() {
         view.backgroundColor = .green
         view.addSubview(tableView)
-
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10).isActive = true
         tableView.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor, constant: -10).isActive = true

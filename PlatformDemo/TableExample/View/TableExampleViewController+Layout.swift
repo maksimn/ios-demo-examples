@@ -14,6 +14,10 @@ extension TableExampleViewController {
         view.addSubview(tableView)
 
         tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 24).isActive = true
+        tableView.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor, constant: -10).isActive = true
+        tableView.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor, constant: 10).isActive = true
+        tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -6).isActive = true
         tableView.backgroundColor = .white
         tableView.layer.cornerRadius = 16
         tableView.register(TableExampleCell.self, forCellReuseIdentifier: "\(TableExampleCell.self)")
@@ -23,12 +27,5 @@ extension TableExampleViewController {
         tableView.estimatedRowHeight = UITableView.automaticDimension
         tableView.tableHeaderView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.size.width, height: 1))
         tableView.tableFooterView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.size.width, height: 1))
-    }
-
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-
-        tableView.frame = CGRect(x: 10, y: 100,
-                                 width: UIScreen.main.bounds.width - 20, height: UIScreen.main.bounds.height - 100)
     }
 }

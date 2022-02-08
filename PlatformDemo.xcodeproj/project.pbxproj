@@ -19,7 +19,7 @@
 		0C88F4A627B2F6D500AC8765 /* ExampleNavigatorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C88F4A527B2F6D500AC8765 /* ExampleNavigatorImpl.swift */; };
 		0C88F4A927B3158500AC8765 /* ExampleRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C88F4A827B3158500AC8765 /* ExampleRouter.swift */; };
 		0C88F4AB27B315A700AC8765 /* TableExampleRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C88F4AA27B315A700AC8765 /* TableExampleRouter.swift */; };
-		0C88F4AD27B315E300AC8765 /* ExampleItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C88F4AC27B315E300AC8765 /* ExampleItem.swift */; };
+		0C88F4AD27B315E300AC8765 /* ExampleNavigatorItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C88F4AC27B315E300AC8765 /* ExampleNavigatorItem.swift */; };
 		21F9AD03E42B0143BA352CE6 /* Pods_PlatformDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE782CAD1BA0BD2AA40CAFF7 /* Pods_PlatformDemo.framework */; };
 		59278C9626F696D300E795A6 /* Swift+Example.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59278C9526F696D300E795A6 /* Swift+Example.swift */; };
 		5947E83026F5020F00FCC315 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5947E82F26F5020F00FCC315 /* AppDelegate.swift */; };
@@ -47,7 +47,7 @@
 		0C88F4A527B2F6D500AC8765 /* ExampleNavigatorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleNavigatorImpl.swift; sourceTree = "<group>"; };
 		0C88F4A827B3158500AC8765 /* ExampleRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleRouter.swift; sourceTree = "<group>"; };
 		0C88F4AA27B315A700AC8765 /* TableExampleRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableExampleRouter.swift; sourceTree = "<group>"; };
-		0C88F4AC27B315E300AC8765 /* ExampleItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleItem.swift; sourceTree = "<group>"; };
+		0C88F4AC27B315E300AC8765 /* ExampleNavigatorItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleNavigatorItem.swift; sourceTree = "<group>"; };
 		59278C9526F696D300E795A6 /* Swift+Example.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Swift+Example.swift"; sourceTree = "<group>"; };
 		5947E82C26F5020F00FCC315 /* PlatformDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlatformDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5947E82F26F5020F00FCC315 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -168,7 +168,7 @@
 			children = (
 				0C88F4A327B2F6BB00AC8765 /* ExampleNavigator.swift */,
 				0C88F4A527B2F6D500AC8765 /* ExampleNavigatorImpl.swift */,
-				0C88F4AC27B315E300AC8765 /* ExampleItem.swift */,
+				0C88F4AC27B315E300AC8765 /* ExampleNavigatorItem.swift */,
 			);
 			path = Feature;
 			sourceTree = "<group>";
@@ -329,7 +329,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5993622126FB728400AD78C5 /* TableExampleModelImpl.swift in Sources */,
-				0C88F4AD27B315E300AC8765 /* ExampleItem.swift in Sources */,
+				0C88F4AD27B315E300AC8765 /* ExampleNavigatorItem.swift in Sources */,
 				0C88F49127B2BFFC00AC8765 /* MainScreenViewController.swift in Sources */,
 				596B578326FE7B34003C330B /* TableExampleViewController+Layout.swift in Sources */,
 				0C88F48927B2BCE600AC8765 /* MainScreenBuilderImpl.swift in Sources */,

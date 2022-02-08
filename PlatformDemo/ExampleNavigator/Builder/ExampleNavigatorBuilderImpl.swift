@@ -17,12 +17,12 @@ final class ExampleNavigatorBuilderImpl: ExampleNavigatorBuilder {
     
     func build() -> ExampleNavigator {
         let viewController = viewControllerBlock()
-        let exampleItem = ExampleItem(
+        let exampleNavigatorItem = ExampleNavigatorItem(
             title: "Table view with cells with different height.",
             router: TableExampleRouter(viewController: viewController ?? UIViewController(),
                                        tableExampleBuilder: TableExampleBuilderImpl())
         )
 
-        return ExampleNavigatorImpl(exampleItems: [exampleItem])
+        return ExampleNavigatorImpl(items: [exampleNavigatorItem])
     }
 }
