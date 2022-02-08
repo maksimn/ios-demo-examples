@@ -15,11 +15,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
 
-        let tableExampleBuilder = TableExampleBuilderImpl()
-        let viewController = tableExampleBuilder.build()
+        let mainScreenBuilder = MainScreenBuilderImpl()
+        let mainScreenGraph = mainScreenBuilder.build()
 
         window = UIWindow(windowScene: windowScene)
-        window?.rootViewController = viewController
+        window?.rootViewController = mainScreenGraph.navigationController
         window?.makeKeyAndVisible()
     }
 }

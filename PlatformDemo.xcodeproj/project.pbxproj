@@ -10,6 +10,13 @@
 		0C7C35CB27B2A18300D74662 /* TableExampleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7C35CA27B2A18300D74662 /* TableExampleBuilder.swift */; };
 		0C7C35CE27B2AB3100D74662 /* TableExampleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7C35CD27B2AB3100D74662 /* TableExampleModel.swift */; };
 		0C7C35D127B2ADCE00D74662 /* TableExampleBuilderImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7C35D027B2ADCE00D74662 /* TableExampleBuilderImpl.swift */; };
+		0C88F48727B2BCD800AC8765 /* MainScreenBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C88F48627B2BCD800AC8765 /* MainScreenBuilder.swift */; };
+		0C88F48927B2BCE600AC8765 /* MainScreenBuilderImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C88F48827B2BCE600AC8765 /* MainScreenBuilderImpl.swift */; };
+		0C88F49127B2BFFC00AC8765 /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C88F49027B2BFFC00AC8765 /* MainScreenViewController.swift */; };
+		0C88F49527B2D3C000AC8765 /* MainScreenGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C88F49427B2D3C000AC8765 /* MainScreenGraph.swift */; };
+		0C88F49727B2D3CE00AC8765 /* MainScreenGraphImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C88F49627B2D3CE00AC8765 /* MainScreenGraphImpl.swift */; };
+		0C88F49927B2D3DA00AC8765 /* MainScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C88F49827B2D3DA00AC8765 /* MainScreenRouter.swift */; };
+		0C88F49B27B2D3E900AC8765 /* MainScreenRouterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C88F49A27B2D3E900AC8765 /* MainScreenRouterImpl.swift */; };
 		21F9AD03E42B0143BA352CE6 /* Pods_PlatformDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE782CAD1BA0BD2AA40CAFF7 /* Pods_PlatformDemo.framework */; };
 		59278C9626F696D300E795A6 /* Swift+Example.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59278C9526F696D300E795A6 /* Swift+Example.swift */; };
 		5947E83026F5020F00FCC315 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5947E82F26F5020F00FCC315 /* AppDelegate.swift */; };
@@ -28,6 +35,13 @@
 		0C7C35CA27B2A18300D74662 /* TableExampleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableExampleBuilder.swift; sourceTree = "<group>"; };
 		0C7C35CD27B2AB3100D74662 /* TableExampleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableExampleModel.swift; sourceTree = "<group>"; };
 		0C7C35D027B2ADCE00D74662 /* TableExampleBuilderImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableExampleBuilderImpl.swift; sourceTree = "<group>"; };
+		0C88F48627B2BCD800AC8765 /* MainScreenBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenBuilder.swift; sourceTree = "<group>"; };
+		0C88F48827B2BCE600AC8765 /* MainScreenBuilderImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenBuilderImpl.swift; sourceTree = "<group>"; };
+		0C88F49027B2BFFC00AC8765 /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
+		0C88F49427B2D3C000AC8765 /* MainScreenGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenGraph.swift; sourceTree = "<group>"; };
+		0C88F49627B2D3CE00AC8765 /* MainScreenGraphImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenGraphImpl.swift; sourceTree = "<group>"; };
+		0C88F49827B2D3DA00AC8765 /* MainScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenRouter.swift; sourceTree = "<group>"; };
+		0C88F49A27B2D3E900AC8765 /* MainScreenRouterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenRouterImpl.swift; sourceTree = "<group>"; };
 		59278C9526F696D300E795A6 /* Swift+Example.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Swift+Example.swift"; sourceTree = "<group>"; };
 		5947E82C26F5020F00FCC315 /* PlatformDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlatformDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5947E82F26F5020F00FCC315 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -98,6 +112,52 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		0C88F48427B2BCB300AC8765 /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				0C88F48527B2BCC700AC8765 /* Builder */,
+				0C88F49227B2D32800AC8765 /* Graph */,
+				0C88F49327B2D33300AC8765 /* Router */,
+				0C88F48B27B2BF0400AC8765 /* View */,
+			);
+			path = MainScreen;
+			sourceTree = "<group>";
+		};
+		0C88F48527B2BCC700AC8765 /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				0C88F48627B2BCD800AC8765 /* MainScreenBuilder.swift */,
+				0C88F48827B2BCE600AC8765 /* MainScreenBuilderImpl.swift */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
+		0C88F48B27B2BF0400AC8765 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0C88F49027B2BFFC00AC8765 /* MainScreenViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0C88F49227B2D32800AC8765 /* Graph */ = {
+			isa = PBXGroup;
+			children = (
+				0C88F49427B2D3C000AC8765 /* MainScreenGraph.swift */,
+				0C88F49627B2D3CE00AC8765 /* MainScreenGraphImpl.swift */,
+			);
+			path = Graph;
+			sourceTree = "<group>";
+		};
+		0C88F49327B2D33300AC8765 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				0C88F49827B2D3DA00AC8765 /* MainScreenRouter.swift */,
+				0C88F49A27B2D3E900AC8765 /* MainScreenRouterImpl.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		3BD82CD9027377A2D6821418 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +187,7 @@
 		5947E82E26F5020F00FCC315 /* PlatformDemo */ = {
 			isa = PBXGroup;
 			children = (
+				0C88F48427B2BCB300AC8765 /* MainScreen */,
 				0C7C35C827B29CD600D74662 /* TableExample */,
 				5947E82F26F5020F00FCC315 /* AppDelegate.swift */,
 				5947E83126F5020F00FCC315 /* SceneDelegate.swift */,
@@ -243,14 +304,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				5993622126FB728400AD78C5 /* TableExampleModelImpl.swift in Sources */,
+				0C88F49127B2BFFC00AC8765 /* MainScreenViewController.swift in Sources */,
 				596B578326FE7B34003C330B /* TableExampleViewController+Layout.swift in Sources */,
+				0C88F48927B2BCE600AC8765 /* MainScreenBuilderImpl.swift in Sources */,
 				5993621E26FB648800AD78C5 /* TableExampleCell+Layout.swift in Sources */,
 				0C7C35CE27B2AB3100D74662 /* TableExampleModel.swift in Sources */,
 				5993621A26FB646600AD78C5 /* TableExampleCell.swift in Sources */,
+				0C88F49527B2D3C000AC8765 /* MainScreenGraph.swift in Sources */,
+				0C88F48727B2BCD800AC8765 /* MainScreenBuilder.swift in Sources */,
+				0C88F49927B2D3DA00AC8765 /* MainScreenRouter.swift in Sources */,
 				5947E83426F5020F00FCC315 /* TableExampleViewController.swift in Sources */,
+				0C88F49B27B2D3E900AC8765 /* MainScreenRouterImpl.swift in Sources */,
 				0C7C35CB27B2A18300D74662 /* TableExampleBuilder.swift in Sources */,
 				59278C9626F696D300E795A6 /* Swift+Example.swift in Sources */,
 				5993621626FB645900AD78C5 /* TableExampleTableController.swift in Sources */,
+				0C88F49727B2D3CE00AC8765 /* MainScreenGraphImpl.swift in Sources */,
 				0C7C35D127B2ADCE00D74662 /* TableExampleBuilderImpl.swift in Sources */,
 				5947E83026F5020F00FCC315 /* AppDelegate.swift in Sources */,
 				5947E83226F5020F00FCC315 /* SceneDelegate.swift in Sources */,
