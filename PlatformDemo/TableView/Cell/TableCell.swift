@@ -9,7 +9,7 @@ import UIKit
 
 class TableCell: UITableViewCell {
 
-    let placeholderLabel = UILabel()
+    let label = UILabel()
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)

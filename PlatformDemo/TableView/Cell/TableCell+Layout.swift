@@ -19,20 +19,20 @@ extension TableCell {
     }
 
     private func initPlacholderLabel() {
-        placeholderLabel.textColor = .gray
-        placeholderLabel.font = UIFont.systemFont(ofSize: 17)
-        placeholderLabel.numberOfLines = 0
-        placeholderLabel.preferredMaxLayoutWidth = UIScreen.main.bounds.width - 68
-        contentView.addSubview(placeholderLabel)
+        label.textColor = .gray
+        label.font = UIFont.systemFont(ofSize: 17)
+        label.numberOfLines = 0
+        label.preferredMaxLayoutWidth = UIScreen.main.bounds.width - 68
+        contentView.addSubview(label)
     }
 
     override func layoutSubviews() {
         super.layoutSubviews()
-        placeholderLabel.frame = CGRect(origin: CGPoint(x: 40, y: 17), size: placeholderLabel.intrinsicContentSize)
+        label.frame = CGRect(origin: CGPoint(x: 40, y: 17), size: label.intrinsicContentSize)
     }
 
     override var intrinsicContentSize: CGSize {
-        CGSize(width: UIScreen.main.bounds.width - 20, height: placeholderLabel.frame.height + 34)
+        CGSize(width: UIScreen.main.bounds.width - 20, height: label.frame.height + 34)
     }
 }
 

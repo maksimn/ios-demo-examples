@@ -11,7 +11,9 @@ class TableController: NSObject, UITableViewDataSource, UITableViewDelegate {
 
     var strings: [String] = []
 
-    let cellToComputeRowHeight = TableCell(frame: .zero)
+    let hCell = TableCell(frame: .zero)
+
+    var onSelectRow: ((Int) -> Void)?
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         strings.count
@@ -23,15 +25,19 @@ class TableController: NSObject, UITableViewDataSource, UITableViewDelegate {
             return UITableViewCell()
         }
 
-        cell.placeholderLabel.text = strings[indexPath.row]
+        cell.label.text = strings[indexPath.row]
 
         return cell
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        cellToComputeRowHeight.placeholderLabel.text = strings[indexPath.row]
-        cellToComputeRowHeight.layoutSubviews()
+        hCell.label.text = strings[indexPath.row]
+        hCell.layoutSubviews()
 
-        return cellToComputeRowHeight.intrinsicContentSize.height
+        return hCell.intrinsicContentSize.height
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        onSelectRow?(indexPath.row)
     }
 }
