@@ -18,7 +18,7 @@
 		0C88F4A127B2F5AB00AC8765 /* ExampleNavigatorBuilderImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C88F4A027B2F5AB00AC8765 /* ExampleNavigatorBuilderImpl.swift */; };
 		0C88F4A427B2F6BB00AC8765 /* ExampleNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C88F4A327B2F6BB00AC8765 /* ExampleNavigator.swift */; };
 		0C88F4A627B2F6D500AC8765 /* ExampleNavigatorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C88F4A527B2F6D500AC8765 /* ExampleNavigatorImpl.swift */; };
-		0C88F4AB27B315A700AC8765 /* TableExampleRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C88F4AA27B315A700AC8765 /* TableExampleRouter.swift */; };
+		0C88F4AB27B315A700AC8765 /* RoutingToTableExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C88F4AA27B315A700AC8765 /* RoutingToTableExample.swift */; };
 		0C88F4AD27B315E300AC8765 /* ExampleNavigatorItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C88F4AC27B315E300AC8765 /* ExampleNavigatorItem.swift */; };
 		21F9AD03E42B0143BA352CE6 /* Pods_PlatformDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE782CAD1BA0BD2AA40CAFF7 /* Pods_PlatformDemo.framework */; };
 		59278C9626F696D300E795A6 /* Swift+Example.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59278C9526F696D300E795A6 /* Swift+Example.swift */; };
@@ -46,7 +46,7 @@
 		0C88F4A027B2F5AB00AC8765 /* ExampleNavigatorBuilderImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleNavigatorBuilderImpl.swift; sourceTree = "<group>"; };
 		0C88F4A327B2F6BB00AC8765 /* ExampleNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleNavigator.swift; sourceTree = "<group>"; };
 		0C88F4A527B2F6D500AC8765 /* ExampleNavigatorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleNavigatorImpl.swift; sourceTree = "<group>"; };
-		0C88F4AA27B315A700AC8765 /* TableExampleRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableExampleRouter.swift; sourceTree = "<group>"; };
+		0C88F4AA27B315A700AC8765 /* RoutingToTableExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutingToTableExample.swift; sourceTree = "<group>"; };
 		0C88F4AC27B315E300AC8765 /* ExampleNavigatorItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleNavigatorItem.swift; sourceTree = "<group>"; };
 		59278C9526F696D300E795A6 /* Swift+Example.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Swift+Example.swift"; sourceTree = "<group>"; };
 		5947E82C26F5020F00FCC315 /* PlatformDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlatformDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -156,7 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				0C88F49D27B2F58B00AC8765 /* Builder */,
-				0C88F4A227B2F69F00AC8765 /* Feature */,
+				0C88F4A227B2F69F00AC8765 /* Domain */,
 				0C88F4A727B3156300AC8765 /* Router */,
 			);
 			path = ExampleNavigator;
@@ -171,20 +171,20 @@
 			path = Builder;
 			sourceTree = "<group>";
 		};
-		0C88F4A227B2F69F00AC8765 /* Feature */ = {
+		0C88F4A227B2F69F00AC8765 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
 				0C88F4A327B2F6BB00AC8765 /* ExampleNavigator.swift */,
 				0C88F4A527B2F6D500AC8765 /* ExampleNavigatorImpl.swift */,
 				0C88F4AC27B315E300AC8765 /* ExampleNavigatorItem.swift */,
 			);
-			path = Feature;
+			path = Domain;
 			sourceTree = "<group>";
 		};
 		0C88F4A727B3156300AC8765 /* Router */ = {
 			isa = PBXGroup;
 			children = (
-				0C88F4AA27B315A700AC8765 /* TableExampleRouter.swift */,
+				0C88F4AA27B315A700AC8765 /* RoutingToTableExample.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -351,7 +351,7 @@
 				59278C9626F696D300E795A6 /* Swift+Example.swift in Sources */,
 				5993621626FB645900AD78C5 /* TableExampleTableController.swift in Sources */,
 				0C88F4A427B2F6BB00AC8765 /* ExampleNavigator.swift in Sources */,
-				0C88F4AB27B315A700AC8765 /* TableExampleRouter.swift in Sources */,
+				0C88F4AB27B315A700AC8765 /* RoutingToTableExample.swift in Sources */,
 				0C65DCD427B34C1E0066756F /* CoreRouter.swift in Sources */,
 				0C88F4A127B2F5AB00AC8765 /* ExampleNavigatorBuilderImpl.swift in Sources */,
 				0C7C35D127B2ADCE00D74662 /* TableExampleBuilderImpl.swift in Sources */,
