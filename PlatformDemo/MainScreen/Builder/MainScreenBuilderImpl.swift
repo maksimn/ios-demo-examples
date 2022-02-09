@@ -9,14 +9,15 @@ import UIKit
 
 final class MainScreenBuilderImpl: MainScreenBuilder {
 
-    func build() -> UIViewController {
-        weak var viewControllerLazy: UIViewController?
+    func build() -> UINavigationController {
+        let navigationController = UINavigationController()
 
-        let exampleNavigatorBuilder = ExampleNavigatorBuilderImpl(viewControllerBlock: { viewControllerLazy })
+        let exampleNavigatorBuilder = ExampleNavigatorBuilderImpl(navigationController: navigationController)
         let viewController = MainScreenViewController(exampleNavigatorBuilder: exampleNavigatorBuilder)
 
-        viewControllerLazy = viewController
+        navigationController.viewControllers = [viewController]
+        navigationController.navigationBar.isHidden = true
         
-        return viewController
+        return navigationController
     }
 }

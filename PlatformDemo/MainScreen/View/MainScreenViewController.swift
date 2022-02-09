@@ -9,13 +9,12 @@ import UIKit
 
 final class MainScreenViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
-    private let exampleNavigatorBuilder: ExampleNavigatorBuilder
-    private lazy var exampleNavigator = exampleNavigatorBuilder.build()
+    private let exampleNavigator: ExampleNavigator
 
     private let tableView = UITableView()
 
     init(exampleNavigatorBuilder: ExampleNavigatorBuilder) {
-        self.exampleNavigatorBuilder = exampleNavigatorBuilder
+        self.exampleNavigator = exampleNavigatorBuilder.build()
         super.init(nibName: nil, bundle: nil)
         initViews()
     }

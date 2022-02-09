@@ -9,17 +9,16 @@ import UIKit
 
 final class ExampleNavigatorBuilderImpl: ExampleNavigatorBuilder {
 
-    private let viewControllerBlock: () -> UIViewController?
+    private let navigationController: UINavigationController
 
-    init(viewControllerBlock: @escaping () -> UIViewController?) {
-        self.viewControllerBlock = viewControllerBlock
+    init(navigationController: UINavigationController) {
+        self.navigationController = navigationController
     }
     
     func build() -> ExampleNavigator {
-        let viewController = viewControllerBlock()
         let exampleNavigatorItem = ExampleNavigatorItem(
             title: "Table view with cells with different height.",
-            router: RoutingToTableExample(viewController: viewController ?? UIViewController(),
+            router: RoutingToTableExample(navigationController: navigationController,
                                           tableExampleBuilder: TableExampleBuilderImpl())
         )
 

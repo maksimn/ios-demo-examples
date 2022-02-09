@@ -9,17 +9,17 @@ import UIKit
 
 final class RoutingToTableExample: CoreRouter {
 
-    private let viewController: UIViewController
+    private let navigationController: UINavigationController
     private let tableExampleBuilder: TableExampleBuilder
 
-    init(viewController: UIViewController, tableExampleBuilder: TableExampleBuilder) {
-        self.viewController = viewController
+    init(navigationController: UINavigationController, tableExampleBuilder: TableExampleBuilder) {
+        self.navigationController = navigationController
         self.tableExampleBuilder = tableExampleBuilder
     }
 
     func navigate() {
         let tableExampleViewController = tableExampleBuilder.build()
 
-        viewController.present(tableExampleViewController, animated: true)
+        navigationController.topViewController?.present(tableExampleViewController, animated: true)
     }
 }
