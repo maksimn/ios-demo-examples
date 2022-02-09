@@ -8,5 +8,5 @@
 struct ExampleNavigatorItem {
 
     let title: String
-    let router: ExampleRouter?
+    let router: CoreRouter?
 }

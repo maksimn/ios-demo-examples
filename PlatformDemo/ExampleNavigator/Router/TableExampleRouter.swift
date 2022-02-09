@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class TableExampleRouter: ExampleRouter {
+final class TableExampleRouter: CoreRouter {
 
     private let viewController: UIViewController
     private let tableExampleBuilder: TableExampleBuilder
